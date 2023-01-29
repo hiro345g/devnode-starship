@@ -4,6 +4,15 @@
 
 以下の説明では、この README.md があるディレクトリーを `${DC_DIR}` と表します。
 
+## 必要なもの
+
+devnode-starship を動作をさせるには、次のものが必要です。
+
+- Doker Engine
+- Docker Compose Plugin
+
+これらは Docker Desktop をインストールしてあれば使えるようになっているはずです。
+
 ## 利用方法
 
 初めて使う場合は「準備」に書いてある作業をしてください。
