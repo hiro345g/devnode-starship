@@ -1,0 +1,19 @@
+name: devnode-starship
+services:
+  devnode-starship:
+    image: node:18.13.0-bullseye
+    container_name: devnode-starship
+    hostname: devnode-starship
+    init: true
+    tty: true
+    user: ${USER_UID:-1000}:${USER_GID:-1000}
+    command: sh -c "sh /script/install_starship.sh && sleep infinity"
+    working_dir: /home/node
+    volumes:
+      - download-data:/home/node/Download
+      - ./script:/script:ro
+
+volumes:
+  download-data:
+    name: devnode-download-data
+    external: true

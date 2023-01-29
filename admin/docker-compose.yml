@@ -1,0 +1,15 @@
+name: devnode-starship-admin
+services:
+  devnode-starship-admin:
+    image: node:18.13.0-bullseye
+    container_name: devnode-starship-admin
+    hostname: devnode-starship-admin
+    init: true
+    tty: true
+    volumes:
+      - download-data:/home/node/Download
+      - ../script:/script:ro
+
+volumes:
+  download-data:
+    name: devnode-download-data
